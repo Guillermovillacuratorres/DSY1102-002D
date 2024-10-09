@@ -20,7 +20,7 @@ public class DesarrolloHerencia {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Animal perro = new Perro();
+        Perro perro = new Perro();
         Gato gato = new Gato();
         
         perro.setNombre("Firulais");

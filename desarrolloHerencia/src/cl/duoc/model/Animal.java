@@ -25,9 +25,7 @@ public class Animal {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    public void hacerSonido(){   
-    }
+
     
     
 }
