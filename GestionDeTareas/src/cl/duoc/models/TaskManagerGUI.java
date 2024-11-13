@@ -4,6 +4,8 @@
  */
 package cl.duoc.models;
 
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Cetecom
@@ -195,9 +197,27 @@ public class TaskManagerGUI extends javax.swing.JFrame {
         
         p1.agregarTarea(nuevaTarea);
         System.out.println(p1.obtenerTareas());
+        cargarTabla();
         
     }//GEN-LAST:event_btnAgregarTareaActionPerformed
 
+    
+    
+    
+    public void cargarTabla(){
+        DefaultTableModel modelo = (DefaultTableModel) dtmLitadoTareas.getModel();
+        modelo.setRowCount(0);
+        
+        for(Task i : p1.obtenerTareas()){
+            modelo.addRow(new Object[]{
+            i.getIdTask(),
+            i.getNombre(),
+            i.getFechaLimite(),
+            i.getPrioridad(),
+            i.isCompletada()            
+            });
+        }
+    }
     /**
      * @param args the command line arguments
      */
